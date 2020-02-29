@@ -6,7 +6,7 @@ const Header = () => {
     return (
         <header>
             <h1>
-                RESTy
+                RESTy . . . 
             </h1>
         </header>
     )

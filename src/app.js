@@ -3,23 +3,24 @@
 import React from 'react';
 import Header from './components/header/header.js';
 import Footer from './components/footer/footer.js';
-// import Main from './components/main/main.js';
-//  import './app.scss';
+import Form from './components/form/form.js';
+import './scss/app.scss';
 
 
-class App extends React.Component{
-    constructor(props){
+class App extends React.Component {
+    constructor(props) {
         super(props);
-        this.state = { results: []};
+        this.state = { results: [] };
     }
 
-    handleGo = results => {
-        this.setState({results});
-    }
-    render(){
-        return(
+    // handleGo = results => {
+    //     this.setState({results});
+    // }
+    render() {
+        return (
             <React.Fragment>
                 <Header />
+                <Form />
 
                 <Footer />
 

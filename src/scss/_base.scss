@@ -1,0 +1,42 @@
+* {
+    font-family: $fontFamily;
+
+}
+
+
+body{
+    // background-image: url('https://opticalcortex.com/app/uploads/2014/08/grad-670x376.jpg');
+    background-image: url('https://cdn-media-1.freecodecamp.org/images/1*F8R-PEI9iVJ-sY3qFZemCg.png');
+    background-repeat:no-repeat;
+    background-size: 50%;
+
+}
+
+
+#go  {
+    @extend .button-basic;
+    background-color: darkgray;
+    color: white;
+    margin-left: 20px;
+
+  }
+
+.method{
+    @extend .button-basic;
+    background-color: darkblue;
+    color: white;
+    border: darkcyan;
+    margin-left: 10px;
+}
+
+input {
+    @extend .input-basic;
+    margin-right: 100%;
+    
+}
+header {
+    font-weight: bold;
+    font-size: 50px;
+    margin: 40px 60px ;
+    
+}
