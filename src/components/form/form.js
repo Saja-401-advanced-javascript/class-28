@@ -45,16 +45,18 @@ class Form extends React.Component {
                 <form onSubmit={this.handleUrl}>
                     <section>
                         <input onChange={this.handleChange} type="text" name="url" value={this.state.url} />
+                        <div id="div">
                         <button className="method"> GET</button>
                         <button className="method"> POST</button>
                         <button className="method"> PUT</button>
                         <button className="method"> PATCH</button>
                         <button className="method"> DELETE</button>
+                        </div>
                         <button type="submit" id="go">Gooo</button>
                     </section>
                 </form>
-                <div>
-                    <ReactJson name="Headers" src={this.state.header} />
+                <div id="secdiv">
+                    <ReactJson name="Headers" src={this.state.header} id="header" />
                     <ReactJson name="Response" src={this.state.body} />
                 </div>
             </main>
