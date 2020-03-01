@@ -7,7 +7,7 @@
 ### Links and Resources
 
 - [submission PR](https://github.com/Saja-401-advanced-javascript/class-28/pull/1)
-- [Netlify Deploy](https://happy-volhard-41861d.netlify.com/)
+- [Netlify Deploy](https://angry-kalam-1e50e8.netlify.com/)
 
 
 
