@@ -1,0 +1,47 @@
+* {
+    font-family: $fontFamily;
+    text-align: center;
+
+}
+
+
+body{
+    background-repeat:no-repeat;
+
+}
+
+
+#go  {
+    @extend .button-basic;
+    background-color: rgb(14, 18, 53);
+    color: white;
+    margin-left: 20px;
+
+  }
+
+.method{
+    @extend .button-basic;
+    background-color: darkblue;
+    color: white;
+    border: darkcyan;
+    margin-left: 10px;
+}
+
+input {
+    @extend .input-basic;
+    margin-left: 345px;
+
+    
+}
+header {
+    font-weight: bold;
+    font-size: 50px;
+    margin: 40px 60px ;
+    
+}
+
+#secdiv{
+margin-bottom: 100px;
+font-size: 20px;
+}
+
