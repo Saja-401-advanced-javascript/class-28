@@ -1,7 +1,6 @@
 import React from 'react';
 import ReactJson from 'react-json-view';
-// import superagent from 'superagent';
-// import { render } from 'enzyme';
+
 
 
 
@@ -56,8 +55,8 @@ class Form extends React.Component {
                     </section>
                 </form>
                 <div id="secdiv">
-                    <ReactJson name="Headers" src={this.state.header} id="header" />
-                    <ReactJson name="Response" src={this.state.body} />
+                     <ReactJson name="Headers" src={this.state.header} id="header" /> 
+                    <ReactJson name="Response" src={this.state.body} /> 
                 </div>
             </main>
         )

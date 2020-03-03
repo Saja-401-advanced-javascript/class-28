@@ -3,7 +3,7 @@
 import React from 'react';
 import Header from './components/header/header.js';
 import Footer from './components/footer/footer.js';
-import Form from './components/form/form.js';
+import Result from './components/form/results.js';
 import './scss/app.scss';
 
 
@@ -13,20 +13,13 @@ class App extends React.Component {
         this.state = { results: [] };
     }
 
-    // handleGo = results => {
-    //     this.setState({results});
-    // }
+
     render() {
         return (
             <React.Fragment>
                 <Header />
-                <Form />
-
+                <Result />
                 <Footer />
-
-
-
-
             </React.Fragment>
         )
     }

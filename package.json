@@ -26,8 +26,7 @@
     "eject": "react-scripts eject",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
-    "lint": "eslint **/*.js",
-    "parser": "babel-eslint"
+    "lint":"eslint '**/*.js'"
   },
   "repository": {
     "type": "git",
@@ -39,7 +38,7 @@
   "bugs": {
     "url": "https://github.com/Saja-401-advanced-javascript/class-28/issues"
   },
-  "homepage": "/",
+  "homepage": "https://github.com/Saja-401-advanced-javascript/class-28/",
   "browserslist": {
     "production": [
       ">0.2%",
