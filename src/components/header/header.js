@@ -1,6 +1,7 @@
 'use strict ';
 
 import React from 'react';
+import {Link, NavLink} from 'react-router-dom';
 
 const Header = () => {
     return (
@@ -8,6 +9,16 @@ const Header = () => {
             <h1>
                 RESTy . . . 
             </h1>
+            <nav>
+                <ul>
+                    <li>
+                        <Link to="/">Home</Link>
+                    </li>
+                    <li> 
+                        <NavLink to="/history"> History </NavLink>
+                    </li>
+                </ul>
+            </nav>
         </header>
     )
 }
