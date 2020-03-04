@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/Saja-401-advanced-javascript/class-28/precache-manifest.c1410307cf56839467de1233a1a57039.js"
+  "/Saja-401-advanced-javascript/class-28/precache-manifest.c000da66300af55e68f8d829eaa8a494.js"
 );
 
 self.addEventListener('message', (event) => {
