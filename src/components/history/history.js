@@ -1,33 +1,23 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Route, Router } from 'react-router-dom';
+import List from '../list/list.js';
 
-
-class History extends React.Component {
-    constructor(props) {
-        super(props);
-    }
-
-    render() {
-        return (
-            <>
-                <div>
-                    <ul>
-
-                        {Object.keys(this.props.data).map((val, idx) => {
-
-                            return <li>
-                                <Link to="/lab28" key={idx} onClick={() => this.props.reDo(val)}>{val}</Link>;
-                
-              </li>;
-
-                        })}
-                    </ul>
-                </div>
-            </>
-        );
-    }
-
+const History = props => {
+    let history = props.info && Object.values(props.info).map((val,idx) => {
+        return(
+            <li>
+                <p key={idx}>{val.url}</p>
+            </li>
+        )
+    })
+    return(
+        <aside>
+          <h3>History</h3>
+          <Route exact path="/history" render={() => <List>{history}</List>}></Route>
+        </aside>
+      );
 }
 
 
-export default History;
+
+export default History

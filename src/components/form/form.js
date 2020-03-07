@@ -1,9 +1,7 @@
 import React from 'react';
 import ReactJson from 'react-json-view';
-import { Route } from 'react-router-dom';
 import Loader from 'react-loader-spinner';
 import { If, Then, Else } from '../if/if.js';
-import History from '../history/history.js';
 
 class Form extends React.Component {
     constructor(props) {
@@ -15,11 +13,21 @@ class Form extends React.Component {
             body: {},
             loader: true,
             open: true,
+            history:  {}
         }
-        // console.log('kkkkkkkkk',this.state.body);
 
     }
 
+    handleHistory = event => {
+        let url = this.state.url;
+        let source = url
+        let history = this.state.history;
+        let uniq = Object.keys(this.state.history).length;
+        history[uniq] =source;
+        this.setState({history})
+        console.log('rrrrrrr', this.state.history);
+        
+    }
 
     handleUrl = async event => {
         this.setState({ open: false })
@@ -27,18 +35,21 @@ class Form extends React.Component {
         await (await fetch(`${this.state.url}`)).json()
             .then(response => {
                 let header = { 'Content-Type': 'application/json' };
-                console.log('pppppp', header);
                 let body = response;
-                // console.log('reessss', this.state.body);
                 this.setState({ body, header });
                 this.setState({ loader: false })
+                this.setState({ data: { header, body } })
+
+                // this.props.saveToHistory(this.state.history);
 
             }).catch(e => {
                 let body = { error: "wrong Api" };
                 let header = {};
                 this.setState({ header, body });
             });
-
+            console.log('kkkkkkk', this.state);
+            
+            
     };
 
 
@@ -49,67 +60,58 @@ class Form extends React.Component {
 
     }
 
-    toggleOpen = event => {
+    toggleOpen = () => {
         this.setState({ open: !this.state.open })
     }
 
-    handleHistory = (api, data) => {
-        let newAPI = this.state.responses;
-        newAPI[api] = data;
-        this.setState({ responses: newAPI });
-        this.setState({ current: api })
-        console.log(this.state.responses);
-        
-    }
 
 
 
     render() {
         return (
             <>
-            <main>
-                <form onSubmit={this.handleUrl}>
-                    <section>
-                        <input onChange={this.handleChange} type="text" name="url" value={this.state.url} />
-                        <div id="div">
-                            <button className="method"> GET</button>
-                            <button className="method"> POST</button>
-                            <button className="method"> PUT</button>
-                            <button className="method"> PATCH</button>
-                            <button className="method"> DELETE</button>
-                        </div>
-                        <button type="submit" id="go">Gooo</button>
-                    </section>
-                </form>
-                <div id="secdiv">
-                    <If condition={this.state.open}>
-                        <Then>
+                <main>
+                    <form onSubmit={this.handleUrl} >
+                        <section>
+                            <input onChange={this.handleChange} type="text" name="url" value={this.state.url} />
+                            <div id="div">
+                                <button className="method"> GET</button>
+                                <button className="method"> POST</button>
+                                <button className="method"> PUT</button>
+                                <button className="method"> PATCH</button>
+                                <button className="method"> DELETE</button>
+                            </div>
+                            <button type="submit" id="go">Gooo</button>
+                        </section>
+                    </form>
+                    <div id="secdiv">
+                        <If condition={this.state.open}>
+                            <Then>
 
-                        </Then>
-                        <Else>
-                            <If condition={this.state.loader}>
-                                <Then>
-                                    <Loader
-                                        type="Circles"
-                                        color="#00BFFF"
-                                        height={100}
-                                        width={100}
-                                    />
-                                </Then>
-                                <Else>
-                                    <ReactJson name="Headers" src={this.state.header} id="header" />
-                                    <ReactJson name="Response" src={this.state.body} />
-                                </Else>
-                            </If>
-                        </Else>
+                            </Then>
+                            <Else>
+                                <If condition={this.state.loader}>
+                                    <Then>
+                                        <Loader
+                                            type="Circles"
+                                            color="#00BFFF"
+                                            height={100}
+                                            width={100}
+                                        />
+                                    </Then>
+                                    <Else>
+                                        <ReactJson name="Headers" src={this.state.header} id="header" />
+                                        <ReactJson name="Response" src={this.state.body} />
+                                    </Else>
+                                </If>
+                            </Else>
 
-                    </If>
-                </div>
-            </main>
-                <Route exact path="/history">
-                    <History data={this.state.responses} />
-                </Route>
-                </>
+                        </If>
+                    </div>
+
+                </main>
+
+            </>
         )
     }
 }
