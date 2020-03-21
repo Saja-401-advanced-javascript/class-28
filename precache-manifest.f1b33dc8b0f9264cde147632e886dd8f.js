@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "0258272d638ac780c4305d53f856c3f4",
+    "revision": "d3311bfbb813b3d5beda612ec7c810d0",
     "url": "/Saja-401-advanced-javascript/class-28/index.html"
   },
   {
-    "revision": "c6716a3736b8f74f5229",
+    "revision": "ea3b480470a32ea1badf",
     "url": "/Saja-401-advanced-javascript/class-28/static/css/main.76b75f2b.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/Saja-401-advanced-javascript/class-28/static/js/2.99e2500f.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "c6716a3736b8f74f5229",
-    "url": "/Saja-401-advanced-javascript/class-28/static/js/main.f29eca1c.chunk.js"
+    "revision": "ea3b480470a32ea1badf",
+    "url": "/Saja-401-advanced-javascript/class-28/static/js/main.7a63ff54.chunk.js"
   },
   {
     "revision": "a62224daba0b01f6e616",

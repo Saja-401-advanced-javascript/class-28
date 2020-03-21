@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/Saja-401-advanced-javascript/class-28/static/css/main.76b75f2b.chunk.css",
-    "main.js": "/Saja-401-advanced-javascript/class-28/static/js/main.f29eca1c.chunk.js",
-    "main.js.map": "/Saja-401-advanced-javascript/class-28/static/js/main.f29eca1c.chunk.js.map",
+    "main.js": "/Saja-401-advanced-javascript/class-28/static/js/main.7a63ff54.chunk.js",
+    "main.js.map": "/Saja-401-advanced-javascript/class-28/static/js/main.7a63ff54.chunk.js.map",
     "runtime-main.js": "/Saja-401-advanced-javascript/class-28/static/js/runtime-main.983226b0.js",
     "runtime-main.js.map": "/Saja-401-advanced-javascript/class-28/static/js/runtime-main.983226b0.js.map",
     "static/js/2.99e2500f.chunk.js": "/Saja-401-advanced-javascript/class-28/static/js/2.99e2500f.chunk.js",
     "static/js/2.99e2500f.chunk.js.map": "/Saja-401-advanced-javascript/class-28/static/js/2.99e2500f.chunk.js.map",
     "index.html": "/Saja-401-advanced-javascript/class-28/index.html",
-    "precache-manifest.b894f6bdeb44b2b58a69414fc97f1557.js": "/Saja-401-advanced-javascript/class-28/precache-manifest.b894f6bdeb44b2b58a69414fc97f1557.js",
+    "precache-manifest.f1b33dc8b0f9264cde147632e886dd8f.js": "/Saja-401-advanced-javascript/class-28/precache-manifest.f1b33dc8b0f9264cde147632e886dd8f.js",
     "service-worker.js": "/Saja-401-advanced-javascript/class-28/service-worker.js",
     "static/css/main.76b75f2b.chunk.css.map": "/Saja-401-advanced-javascript/class-28/static/css/main.76b75f2b.chunk.css.map",
     "static/js/2.99e2500f.chunk.js.LICENSE.txt": "/Saja-401-advanced-javascript/class-28/static/js/2.99e2500f.chunk.js.LICENSE.txt"
@@ -17,6 +17,6 @@
     "static/js/runtime-main.983226b0.js",
     "static/js/2.99e2500f.chunk.js",
     "static/css/main.76b75f2b.chunk.css",
-    "static/js/main.f29eca1c.chunk.js"
+    "static/js/main.7a63ff54.chunk.js"
   ]
 }
