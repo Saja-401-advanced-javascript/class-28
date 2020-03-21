@@ -10,34 +10,21 @@ import './scss/app.scss';
 
 
 class App extends React.Component {
-    constructor(props) {
-        super(props);
-        this.state = { results: [],
-            loading: false,
-            current :'', };
+    constructor(props){
+        super(props)
+        this.state={
+        }        
     }
 
-    handleUpdate= (data, api) => { 
-        let newResponse = this.state.response;
-        console.log('api',api);
-        console.log('response',newResponse);
-    
-        newResponse[api] = data ;
-        this.setState({response: newResponse});
-        this.setState({current: api});
-        // console.log('i Hope!', this.state.response);
-        // console.log('keys', Object.keys(this.state.response));
-      }
-
-      hereWeGoAgain= (api) => {
-        let newDo = api ;
-        // let data = null ;
-        // this.handleUpdate(data ,api);
-        console.log('new:', newDo);
-        this.setState({current : newDo});
-      }
+    saveToHistory = history => {
+        console.log('oooooooooooooooo');
         
+        this.setState({history})
+    }
+ 
     
+    
+
 
 
     render() {
@@ -45,15 +32,13 @@ class App extends React.Component {
             <React.Fragment>
                 <Header />
                 <Route exact path="/">
-                    <Result />
+                    <Result saveToHistory={this.saveToHistory}  />
                 </Route>
-{/* 
+
                 <Route exact path="/history">
-                    <History data={this.state.response} reDo={this.hereWeGoAgain} />
-                </Route> */}
-                {/* <Route exact path="/history" >
-                    saja
-                </Route> */}
+                    <History info={this.state.history}  />
+                </Route>
+
                 <Footer />
             </React.Fragment>
         )
